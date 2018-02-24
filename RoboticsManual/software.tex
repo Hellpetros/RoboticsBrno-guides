@@ -7,23 +7,70 @@
 Tento text je psán v~sázecím systému \index{LaTeX} \LaTeX . 
 Jeho silná stránka je především matematická sazba 
 (bohužel nevyužijeme) a~snadné zpracování obsahu, rejstříků, seznamů obrázků a~tabulek a~podobně, což dramaticky urychluje přípravu dokumentu. 
+
 Čas, který vložíte do nastavení a~učení se systému, se vrátí v~rychlosti práce
- $\rightarrow$ jedná se o řešení vhodné pro delší dokumenty, např. pro soutěž SOČ nebo dlouhodobou maturitní práci. 
-% Existují různé nadstavby a~rozšíření \TeX{}u, nejznámější je \LaTeX{}.
+ $\rightarrow$ jedná se o řešení vhodné pro delší dokumenty, např. pro soutěž SOČ nebo dlouhodobou maturitní práci\footnote{\url{https://github.com/RoboticsBrno/Latex-slideshow-czech}.}. 
  
-Návody pro \LaTeX lze najít v 
-\url{http://mirrors.nic.cz/tex-archive/info/czech/\|latex-pro-pragmatiky/latex-pro-pragmatiky.pdf} %todo odkaz nejede
-\emergencystretch=2cm a na internetu.
-Hodně vám také může pomoct zdrojový text této dokumentace. 
+Návody pro \LaTeX{}  lze najít na internetu,  pro úvodní zorientování 
+ doporučuji text  \bfseries \itshape  \LaTeX{} pro pragmatiky\footnote{\url{http://mirrors.nic.cz/tex-archive/info/czech/latex-pro-pragmatiky/latex-pro-pragmatiky.pdf} }\upshape \mdseries .
+
+Hodně vám také může pomoct zdrojový text této dokumentace\footnote{\url{https://github.com/RoboticsBrno/RoboticsBrno-guides/tree/RoboticsManual/RoboticsManual}},
+ především hlavní soubor\footnote{\url{https://github.com/RoboticsBrno/RoboticsBrno-guides/blob/RoboticsManual/RoboticsManual/_dokumentace.tex}},
+ kde je nastavení podrobně komentované.  
 
 Příkazy \LaTeX{}u podobně jako C++ a~systémy typu Linux {\bf rozlišují velká a~malá písmena}. 
  
 
-\subsection{Editory}
+\subsection{Instalace a editory pro \LaTeX}
 
-Ve WinXP používám PSpad, v~linuxu TeXstudio. 
-Oba editory umí zavolat překlad do pdf pomocí klávesové zkratky, zobrazit výsledný pdf a~barevné zvýraznění syntaxe. 
-PSpad se dá rozjet i~pod linuxem pomocí prostředí Wine, ale nepodařilo se mi rozchodit volání překladu. 
+%\paragraph{Instalace}
+
+Podobně jako Linux, je i \LaTeX dostupný v řadě distribucí. Doporučuji buď 
+{\bf TeXLive}\footnote{\url{https://www.tug.org/texlive}} \index{TexLive}
+ nebo {\bf MiKTeX}\footnote{\url{https://miktex.org/}}. \index{MiKTeX} 
+{\bf }
+%\paragraph{Editory}
+
+Jako editory ve WinXP používám {\bf PSpad}\footnote{\url{http://www.pspad.com/}},\index{PsPad} v~linuxu {\bf TeXstudio}\footnote{\url{https://www.texstudio.org/}}. \index{TeXstudio} 
+Oba editory umí zavolat překlad do pdf pomocí klávesové zkratky, zobrazit výsledný pdf a~barevné zvýraznění syntaxe. TeXstudio má navíc velké možnosti pro zrychlení práce.  
+
+
+Další možností je tvořit latexové dokumenty online bez nutnosti instalace, například pomocí služby 
+{\bf overleaf}.\footnote{\url{https://www.overleaf.com/}} Overleaf je online služba, která vám umožňuje psát, sdílet a komentovat LaTeXové dokumenty -- ideální pro psaní SOČ. Úvod do možností služby je 
+\href{http://www.kutac.cz/blog/pocitace-a-internety/overleaf-online-latex-editor/}{zde}.  
+
+
+\subsection{\LaTeX{} a SOČ}
+
+Jarek Páral vytvořil na Overleafu LaTeXovou šablonu\footnote{Tady je k dispozici šablona, kterou si můžete na Overleafu zkopírovat jako vlastní projekt a začít tvořit: \url{https://www.overleaf.com/read/gvqvqzwgdtwk} }
+ pro SOČ, kde je řada prvků sazby už optimálně přednastavená. 
+ Šablona navíc obsahuje informace o tom, jak a co psát, o citacích a dalších věcech -- vřele doporučuji. 
+
+Pro inspiraci také doporučuji práce Vojty Bočka, Honzy Mrázka, Jarka Párala, Bédi Saida a Martina Sýkory, dostupné v archivu SOČ\footnote{\url{http://www.soc.cz/archiv-minulych-rocniku/}}, ročníky 32. - 37., kategorie informatika a elektro.
+
+\subsection{Další inspirace k SOČ}
+
+	 \paragraph{Jak na psaní SOČ:}
+		\begin{itemize}
+			\item \url{http://www.soc.cz/soc-krok-za-krokem/}
+			\item \url{http://www.jcmm.cz/cz/podpora-soc.html}		
+		\end{itemize}
+
+	\paragraph{Šablony SOČ pro Word}
+	\begin{itemize}
+		\item \url{http://www.soc.cz/dokumenty/sablona_SOC.docx}
+		\item \url{http://www.jcmm.cz/data/sablona_pro_sockare.docx}
+	\end{itemize}
+
+Doporučuji si obě šablony přečíst, i když je třeba nepoužijete -- jsou v nich zajímavé a užitečné rady.
+
+
+
+
+
+
+
+
 
 
 \section{Github}
