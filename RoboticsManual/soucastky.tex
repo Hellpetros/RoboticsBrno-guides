@@ -81,12 +81,13 @@ Ze začátku nám bude stačit používat tranzistory
 \hyperlink{BD911}{BD911}. 
 
 
-
 \subsection{Cívka}
 
 {\bf Cívka}\index{cívka} neboli {\bf tlumivka}\index{tlumivka} je součástka, 
 jejíž hlavní vlastností je indukčnost, jednotka henry, značka H.
  V~praxi se používají milihenry (mH) a~mikrohenry ( $\mu$H).
+
+\section{Další součástky}
 
 \subsection{Driver}
 
@@ -127,4 +128,12 @@ Například původní frekvence mikrokontroléru ATMega16 je nastavena na 1 MHz.
 Krystal zapojíme takto: Jeden pin krystalu (je jedno, který) připojíme na pin XTAL1 a~druhý na XTAL2. 
 Dále na pin XTAL1 připojíme jednu nožičku kondenzátoru a~druhou na digitální zem (11-GND). 
 To samé u~pinu XTAL2. Hodnotu kondenzátoru můžeme volit od 12~pF do 22~pF.
+
+\subsection{Odrazový infrasenzor}
+
+\index{infrasenzor!odrazový} \label{qrd1114} Tato součástka má v jednom pouzdře vysílací infračervenou LED a přijímací fototranzistor\footnote{Fototranzistor je součástka, která zesiluje signál podle toho, jak je osvětlená}. Umístěná několik mm nad hřiště a zastíněná od okolí je ideální pro rozpoznázní  černé čáry na bílém podkladu a podobně. Dá se také použít pro detekci blízkého předmětu (dojde k zastínění).
+Můžeme použít například QRD1114. Může rozlišit vzdálenosti v rozsahu 0.75--10~mm nebo rozlišit černý a bílý povrch.  
+Na adrese
+\url{https://learn.sparkfun.com/tutorials/qrd1114-optical-detector-hookup-guide} najdeme schéma zapojení i příklad kódu pro Arduino. Ještě jednodušší \hyperref[prog:qrd1114]{příklad kódu}.
+
 
