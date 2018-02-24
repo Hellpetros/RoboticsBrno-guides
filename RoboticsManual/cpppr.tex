@@ -25,13 +25,13 @@ Program bliká červnenou LED.
 
 \label{cpppr3} \subsection{Nejjednodušší PWM} 
 
-PWM \index{PWM} umožňuje (ve spolupráci
-s~\hyperref[driver]{drivery} ) řídit motory, serva a~podobně. Zde je použito na stmívání LED pomocí potenciometru.  %todo doplnit vazby 
+\hyperref[PWM]{PWM}  \index{PWM} umožňuje (ve spolupráci
+s~\hyperref[driver]{drivery}) řídit motory, serva a~podobně. Zde je použito na stmívání LED pomocí potenciometru.
 
 
 \lstinputlisting{priklady_c/PWM_01.cpp}
 
-tento kód funguje pro čip ESP32. Pro čipy řady ATMega, které jsou na deskách Arduino uno, Arduino nano a Arduino Mega je možné použít například tento kód: 
+Výše uvedený kód funguje pro čip ESP32. Pro čipy řady ATMega, které jsou na deskách Arduino uno, Arduino nano a Arduino Mega je možné použít například následující kód: 
 
 \lstinputlisting{priklady_c/PWM_02.cpp}
  
