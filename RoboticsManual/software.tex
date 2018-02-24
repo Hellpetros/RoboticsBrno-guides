@@ -14,8 +14,9 @@ Jeho silná stránka je především matematická sazba
 Návody pro \LaTeX{}  lze najít na internetu,  pro úvodní zorientování 
  doporučuji text  \bfseries \itshape  \LaTeX{} pro pragmatiky\footnote{\url{http://mirrors.nic.cz/tex-archive/info/czech/latex-pro-pragmatiky/latex-pro-pragmatiky.pdf} }\upshape \mdseries .
 
-Hodně vám také může pomoct zdrojový text této dokumentace\footnote{\url{https://github.com/RoboticsBrno/RoboticsBrno-guides/tree/RoboticsManual/RoboticsManual}},
- především hlavní soubor\footnote{\url{https://github.com/RoboticsBrno/RoboticsBrno-guides/blob/RoboticsManual/RoboticsManual/_dokumentace.tex}},
+Hodně vám také může pomoct zdrojový text \href{https://github.com/RoboticsBrno/RoboticsBrno-guides/tree/RoboticsManual/RoboticsManual}{této dokumentace}, 
+ především
+ \href{https://github.com/RoboticsBrno/RoboticsBrno-guides/blob/RoboticsManual/RoboticsManual/_dokumentace.tex}{hlavní soubor},
  kde je nastavení podrobně komentované.  
 
 Příkazy \LaTeX{}u podobně jako C++ a~systémy typu Linux {\bf rozlišují velká a~malá písmena}. 
@@ -63,41 +64,6 @@ Pro inspiraci také doporučuji práce Vojty Bočka, Honzy Mrázka, Jarka Páral
 	\end{itemize}
 
 Doporučuji si obě šablony přečíst, i když je třeba nepoužijete -- jsou v nich zajímavé a užitečné rady.
-
-
-
-
-
-
-
-
-
-
-\section{Github}
-
-\subsection{Proč a jak se používá}
-
-Pokud více lidí pracuje průběžně na stejném projektu, musejí nějak sdílet výsledky svojí práce. K tomu se používají 
-tzv. repozitáře a Github\footnote{\url{www.github.com}} je v současnoti jeden z nejpoužívanějších webů pro tvorbu a správu repozitářů. 
-%todo doplnit vysvětlení, co všechno github umí 
-
-
-Postup práce je následující: na webu github.com si vytvořím repozitář (viz \ref{instal_github}) . Stáhnu k sobě na počítač aktuální verzi repozitáře, upravím, co potřebuji a upravené soubory nahraju zpět na server. 
-
-Repozitář, ve kterém je i tato dokumentace, je na adrese 
-\url{https://github.com/RoboticsBrno/RobotikaBrno-guides/tree/RoboticsManual}.  
-
-
-\subsection{Instalace githubu a stažení repozitáře} \label{instal_github}
-
-\begin{enumerate}
-	\item Na github.com vytvořím účet a přihlásím se. Vpravo můžu založit nový repozitář (new repository) nebo se můžu přepnout do už existujících repozitářů. 
-	
-	\item Na svém počítači si naunstaluji github. V linuxu napíšu do terminálu: {\tt sudo apt-get install git}.  
-	
-	\item Vytvořím si lokální adresář a stáhnu do něj repozitář. V linuxu napíšu do terminálu: {\tt git clone <cestu k repozitáři> }. 
-	Cestu zjistím tak, že se na webu přepnu do repozitáře a kliknu na tlačítko \uv{Clone or download}. Ose bjeví 
-\end{enumerate}
 
 
  
@@ -173,3 +139,48 @@ Tato kapitolka není úvodem do Linuxu (materiálů na toto téma je na webu spo
 \item Znak {\tt \#} znamená řádek na terminálu (zastupuje vypsání aktuálního adresáře). 	
 	
 \end{itemize}
+
+
+\subsection{Github}
+
+%{\bf Proč a jak se používá} 
+%todo udělat podrobný návod pro příkazovou řádku a pro VSCode 
+
+{\bf Repozitář} \index{repozitář} je skupina souborů nějakého projektu, která navíc obsahuje komentovanou historii všech změn projektu. Používá se pro zálohování programů a sdílení a společné týmové práci na rozsáhlejších projektech, především programátorských a textových. 
+
+{\bf Github}\footnote{\url{www.github.com}} \index{github} je v současnosti jeden z nejpoužívanějších webů pro tvorbu a~správu repozitářů. 
+
+Podrobnější představení githubu je  \href{http://www.kutac.cz/blog/pocitace-a-internety/jak-na-git-dil-0-co-proc-jak/}{zde}.
+
+Postup práce je následující: na webu github.com si vytvořím repozitář. Na svůj počítač si nainstaluji git. Stáhnu k sobě na počítač aktuální verzi repozitáře, upravím, co potřebuji, provedu tzv. commit a upravené soubory nahraju zpět na server. Podrobněji v návodech níže. 
+Neustálému komentovanému ukládání jednotlivých verzí se říká {\bf verzování}. 
+
+Repozitář, ve kterém je i tato dokumentace, je na adrese 
+\url{https://github.com/RoboticsBrno/RobotikaBrno-guides/tree/RoboticsManual}.  
+
+
+\paragraph{Návody pro github}
+
+\begin{itemize}
+	\item \href{http://www.kutac.cz/blog/pocitace-a-internety/jak-na-git-dil-1/}{Github na příkazovém řádku v Linuxu.}
+	\item \url{https://help.github.com}
+	
+	% https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/	
+	% https://help.github.com/articles/adding-a-remote/
+\end{itemize}
+
+Verzování na github lze provádět i s pomocí prostředí \hyperref[vscode]{VSCode}.  
+%doplnit návod 
+
+
+%\subsection{Instalace githubu a stažení repozitáře} \label{instal_github}
+
+%\begin{enumerate}
+%	\item Na github.com vytvořím účet a přihlásím se. Vpravo můžu založit nový repozitář (new repository) nebo se můžu přepnout do už existujících repozitářů. 
+	
+%	\item Na svém počítači si naunstaluji github. V linuxu napíšu do terminálu: {\tt sudo apt-get install git}.  
+	
+%	\item Vytvořím si lokální adresář a stáhnu do něj repozitář. V linuxu napíšu do terminálu: {\tt git clone <cestu k repozitáři> }. 
+%	Cestu zjistím tak, že se na webu přepnu do repozitáře a kliknu na tlačítko \uv{Clone or download}. Ose bjeví 
+%\end{enumerate}
+
