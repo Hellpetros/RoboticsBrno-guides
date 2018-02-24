@@ -26,21 +26,16 @@ Program bliká červnenou LED.
 \label{cpppr3} \subsection{Nejjednodušší PWM} 
 
 PWM \index{PWM} umožňuje (ve spolupráci
-s~drivery ) řídit motory, serva a~podobně. Zde je použito na stmívání LED pomocí potenciometru.  %todo doplnit vazby
+s~\hyperref[driver]{drivery} ) řídit motory, serva a~podobně. Zde je použito na stmívání LED pomocí potenciometru.  %todo doplnit vazby 
+
 
 \lstinputlisting{priklady_c/PWM_01.cpp}
 
+tento kód funguje pro čip ESP32. Pro čipy řady ATMega, které jsou na deskách Arduino uno, Arduino nano a Arduino Mega je možné použít například tento kód: 
 
-%je potřeba setupLeds(); ?? 
-
-
-%// ledcSetup(channel, freq, resolution)
-%    // channel = 0 - 15
-%    // resolution = 10 => 2^10 => 1024
-tento kód funguje pro čip ESP32. Pro čipy řady ATMega, které jsou na deskách Arduino uno a~Arduino nano, je potřeba použít tento kód: 
+\lstinputlisting{priklady_c/PWM_02.cpp}
  
-%todo dodělat program PWM
-Funguje stejně, ale místo příkazu ledcWrite je použit:  
+Funguje stejně, ale místo příkazu {\tt ledcWrite()} je použit {\tt analogWrite()}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Infrasenzor na čáru} \label{prog:qrd1114}
