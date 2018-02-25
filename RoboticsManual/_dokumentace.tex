@@ -56,6 +56,7 @@
 \makeindex % zapíná vytváření/ukládání indexů
 % \index{key} % ukládá index
 % \printindex % tiskné indexy/rejstřík
+% aby se rejstřík vytvořil, je nutné samostatně spustit program makeindex <hlavní soubor projektu> nebo v programu TeXstudio v menu Nástroje položku Rejstřík
 
 \usepackage{graphicx} % pro vkládání obrázků a příkaz "\includegraphics"
 %% samotné vložení obrázku
@@ -136,9 +137,12 @@
 \chapter{Ostatní}
 	\input mechanika.tex
 	\input problemy.tex
-	\input prilohy.tex
 
-\printindex % vytiske rejstřík 
+
+\chapter*{Přílohy}  \addcontentsline{toc}{chapter}{Přílohy}
+	\input prilohy.tex
+	
+ \addcontentsline{toc}{chapter}{Rejstřík} \printindex % vytiske rejstřík 
 %todo doplnit velká počáteční písmena a seřadit podle české abecedy
 
 
