@@ -54,7 +54,7 @@ Deska se napájí z~\index{USB} USB (5~V) a~je na ní napěťový převodník
 %todo\rfc{? napěťový převodník} 
 na 3,3~V. Přitom USB může dodávat oficiálně 100~mA, v~reálu ale běžně dodává 500~mA až 1 A. USB porty jsou také vcelku odolné proti zkratu.   
 
-\subsection{ALKS}
+\label{alks} \subsection{ALKS}
 
 Deska ALKS\footnote{Arduion Learning Kit Starter} byla navržena přímo na Robotárně Brno právě proto, že 
 hotová\index{ALKS/deska}\index{deska/ALKS} deska   
@@ -62,15 +62,30 @@ vás hlavně ze začátku zbavuje nutnosti vědět, co si můžete dovolit kam p
 
 Na ALKS se dají nasadit desky ESP~32, Arduino uno  a~Arduino nano, které jí také poskytují napájení.  
 
+{\bf POZOR !} Při připojování čehokoliv dalšího k~této nebo jiné desce si nechte před zapojením napájení všechno zkontrolovat. Hlavně, pokud připojovaná součástka spotřebuje víc proudu (serva a~motory) nebo pokud vyžaduje vyšší napětí. 
+
+\subsubsection*{ALKS a ESP~32}
+
+Pro nasazení desky ESP~32 na ALKS byla \index{LearningKit} napsaná knihovna {\it LearningKit}. 
+Aby fungovala, musí být do souboru {\it platformio.ini} dopsán řádek {\tt lib\_deps = 1745} (bez mezery na začátku řádku) a~do záhlaví souboru {\it main.cpp} doplňte 
+\verb| include "LearningKit.h"|.
+% {\tt include "LearningKit.h\"}.  
+% je nahrazeno \verb| include "LearningKit.h"| , protože \tt tady nějak nefunguje 
+ -- viz obrázek \ref{fig:vsc_rozlozeni} vpravo.
+
+\subsubsection*{ALKS a Arduino nano}
+
+
+
+\subsubsection*{Dokumentace k ALKS}
+
 Stránky  věnované desce ALKS jsou zde: \newline \url{https://github.com/RoboticsBrno/ArduinoLearningKitStarter}  
 
 Zapojení \emergencystretch=2cm desky ALKS je zde: \url{https://github.com/RoboticsBrno/ArduinoLearningKitStarter/blob/master/docs/ArduinoLearningKitStarter.pdf}
 
 Zapojení pinů desky ALKS zde: \url{https://github.com/RoboticsBrno/ArduinoLearningKitStarter/blob/master/docs/pinout.pdf}
 
-Při připojování čehokoliv dalšího k~této nebo jiné desce si nechte před zapojením napájení všechno zkontrolovat. Hlavně, pokud to žere víc proudu (serva a~motory) nebo pokud to vyžaduje vyšší napětí. 
 
-%todo další desky arduino ... 
 
 \subsection{Bluetooth}
 
