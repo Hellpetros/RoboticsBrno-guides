@@ -46,7 +46,7 @@ Jestliže budeme potřebovat jiný úhel natočení, nastavíme logickou jednič
 
 \section{ALKS, další desky a další zařízení}
 
-\subsection{ESP 32}
+\label{esp32} \subsection{ESP 32}
 
 Deska\index{ESP~32!deska}\index{deska!ESP~32} ESP~32 je vývojová deska osazená čipem {\tt ESP-WROOM-32}, který má řadu výborných vlastností.\footnote{url{http://navody.arduino-shop.cz/navody-k-produktum/vyvojova-deska-esp32.html} }
 
@@ -67,13 +67,24 @@ Na ALKS se dají nasadit desky ESP~32, Arduino uno  a~Arduino nano, které jí t
 \subsubsection*{ALKS a ESP~32}
 
 Pro nasazení desky ESP~32 na ALKS byla \index{LearningKit} napsaná knihovna {\it LearningKit}. 
-Aby fungovala, musí být do souboru {\it platformio.ini} dopsán řádek {\tt lib\_deps = 1745} (bez mezery na začátku řádku) a~do záhlaví souboru {\it main.cpp} doplňte 
+Aby fungovala, musí být do souboru {\it platformio.ini} dopsán řádek 
+{\tt lib\_deps = 1745} (bez mezery na začátku řádku) a~do záhlaví souboru {\it main.cpp} doplňte 
 \verb| include "LearningKit.h"|.
 % {\tt include "LearningKit.h\"}.  
 % je nahrazeno \verb| include "LearningKit.h"| , protože \tt tady nějak nefunguje 
  -- viz obrázek \ref{fig:vsc_rozlozeni} vpravo.
 
-\subsubsection*{ALKS a Arduino nano}
+\label{alks:nano} \subsubsection*{ALKS a Arduino nano}
+
+Pro nasazení desky Arduino nano\footnote{\url{https://store.arduino.cc/usa/arduino-nano}} 
+na ALKS byla \index{LearningKit} napsaná knihovna \newline
+{\tt LearningKit\_nano.h}. 
+Aby fungovala, musí být v záhlaví souboru {\it main.cpp} doplněno
+\verb| include "LearningKit_nano.h"|. Protože knihovna \newline {\tt LearningKit\_nano.h} využívá 
+knihovnu {\tt LearningKit.h}, musí být také do souboru {\it platformio.ini} dopsán řádek {\tt lib\_deps = 1745} (bez mezery na začátku řádku)  -- viz obrázek \ref{fig:vsc_rozlozeni} vpravo.
+
+
+
 
 
 
