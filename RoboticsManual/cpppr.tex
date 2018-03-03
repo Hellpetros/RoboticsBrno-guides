@@ -49,6 +49,7 @@ Použijeme součástku \hyperref[qrd1114]{QRD1114}, kolektor (C) je připojený 
 
 \lstinputlisting{priklady_c/qrd1114.cpp}
 
+
 \subsection{Posílání dat pro Lorris po sériové lince} \label{prog:lorris}
 
 Příklad ukazuje posílání dat do Analyzéru pro \hyperref[lorris]{Lorris}.
@@ -62,6 +63,17 @@ Poznámka: pokud chceme data posílat místo Analyzéru do terminálu, použijem
 funkci {\tt Serial.print()} nebo {\tt Serial.println()}. Rozdíl je v tom, že funkce {\tt Serial.write()} posílá byty \uv{tak jak jsou}, zatímco funkce {\tt Serial.print()} převádí jednotlivé byty na řetězce, které představují posílaná čísla -- vyzkoušejte. \index{Serial.print()} \index{Serial.println()} \index{Serial.write()}
 
 \lstinputlisting{priklady_c/lorris_data.cpp}
+
+
+
+\label{prog:sr04} 
+\subsection{Ultrazvukový senzor HC-SR04} 
+
+  \href{https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/}{Zde}
+je kompletní popis senzoru \hyperref[hcsr04]{HC-SR04} včetně zapojení a funkčního zdrojového kódu, který si můžete upravit podle potřeby.  
+
+
+
 
 \label{prog:vnh2sp30} \label{prog:knihovna} 
 \subsection{Řízení motorů s použitím VNH2SP30 -- základní} 
