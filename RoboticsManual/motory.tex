@@ -29,6 +29,17 @@ Další proudy se indukují, když se motorek po vypnutí proudu setrvačností 
  Proč zrovna obdélník? Protože na tranzistorech i driverech jsou při řízení motoru nejmenší ztráty, když jsou zcela otevřené (přenáší maximum napětí nebo proudu) nebo zcela zavřené (nepřenáší nic). Nejmenší ztráty znamenají také nejsnazší možné chlazení. Proto se snažíme stavům mezi oběma krajními mezemi vyhnout a zkrátit je na minimum. 
 
 
+\label{servo} \subsection{Servo}
+
+{\bf (Modelářské) servo} je krabička, která obsahuje motorek s převodovkou do pomala a řídící elektroniku, která se stará o jeho správné natočení. Obvykle se umí otočit v úhlu 180 stupňů s velkou přesností. Jeho klíčová vlastnost je, že polohu, do které se otočil, se snaží udržet. \index{servo} 
+
+Na desce \hyperref[alks]{ALKS} jsou zapojeny vývody pro pět serv, která lze z desky přímo napájet a řídit. 
+Protože servo (jako každý motor) potřebuje hodně proudu, lze přímo z desky napájet pouze nejmenší serva každé zvlášť. Pro větší serva je na desce připraven mini-USB konektor, do kterého je možné připojit samostatné napájení pro serva. 
+
+Pro připojení serv na desku ALKS platí, že GND (zem, mínus) je na okraji desky, 5~V je uprostřed a datový pin je nejblíže čipu. 
+
+{\bf Pozor!} Servo nesnáší přepólování napětí, když se přepóluje, tak shoří (když se přepóluje signál, tak to tolik nevadí).
+
 \subsection{Řízení serva}
 
 \index{servo} Jak se řídí pohyb serva? Pro tento účel je ideální právě generování PWM signálu. 
@@ -42,7 +53,8 @@ Pokud budeme chtít servo posunout do druhé krajní polohy, necháme logickou j
 Pokud budeme chtít střední polohu, tak jedničku nastavíme na 1,5~ms a~nulu na 18,5~ms. 
 Jestliže budeme potřebovat jiný úhel natočení, nastavíme logickou jedničku na odpovídající dobu.
 
-{\bf Pozor!} Servo nesnáší přepólování napětí, když se přepóluje, tak shoří (když se přepóluje signál, tak to tolik nevadí).
+Jednoduchý program pro řízení serva je v kapitole \ref{prog:servo}.
+
 
 \section{ALKS, další desky a další zařízení}
 
@@ -64,7 +76,7 @@ Na ALKS se dají nasadit desky ESP~32, Arduino uno  a~Arduino nano, které jí t
 
 {\bf POZOR !} Při připojování čehokoliv dalšího k~této nebo jiné desce si nechte před zapojením napájení všechno zkontrolovat. Hlavně, pokud připojovaná součástka spotřebuje víc proudu (serva a~motory) nebo pokud vyžaduje vyšší napětí. 
 
-\subsubsection*{ALKS a ESP~32}
+\label{alks:knihovna} \subsubsection*{ALKS a ESP~32}
 
 Pro nasazení desky   \hyperref[esp32]{ESP~32}
  na ALKS byla \index{LearningKit} napsaná knihovna {\it LearningKit}. 

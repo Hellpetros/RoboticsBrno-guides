@@ -65,13 +65,31 @@ funkci {\tt Serial.print()} nebo {\tt Serial.println()}. Rozdíl je v tom, že f
 \lstinputlisting{priklady_c/lorris_data.cpp}
 
 
-
 \label{prog:sr04} 
 \subsection{Ultrazvukový senzor HC-SR04} 
 
   \href{https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/}{Zde}
 je kompletní popis senzoru \hyperref[hcsr04]{HC-SR04} včetně zapojení a funkčního zdrojového kódu, který si můžete upravit podle potřeby.  
 
+
+\label{prog:servo} 
+\subsection{Řízení serva} 
+
+Jednoduchý program pro řízení \hyperref[servo]{serva} pomocí potenciometru.
+
+Pro desku Arduino nano nasazenou na ALKS se program použije tak, jak je. 
+
+Pro desku ESP-32 se musí použít jiná knihovna {\tt Servo.h} (ale se stejným názvem, proto se samotný program nemění). 
+Co se mění, je soubor {\tt platformio.ini}, který kromě \hyperref[alks:knihovna]{knihovny pro ALKS} obsahuje navíc informaci o knihovně pro servo. Do souboru  {\tt platformio.ini}, který vám nachystá VSCode při 
+ \hyperref[vsc:newproject]{založení nového projektu}, je proto potřeba přidat tyto řádky: 
+\begin{verbatim}
+lib_deps = 1745
+           ServoESP32
+\end{verbatim}
+ Přitom první písmeno \uv{S} na druhém řádku musí být přesně pod číslicí \uv{1} na prvním řádku. Na začátku prvního řádku nesmí být mezery. 
+
+
+\lstinputlisting{priklady_c/servo1.cpp}
 
 
 
