@@ -94,6 +94,13 @@ jejíž hlavní vlastností je indukčnost, jednotka henry, značka H.
 Čip nemůže řídit například motor přímo, protože jedním pinem může protékat obvykle maximálně 40~mA. 
 Většina motorů potřebuje mnohem větší proud.
  Proto se používají součástky zvané\index{driver} {\bf drivery}, které podle pokynů z~čipu řídí proud z~baterií do motorů a~servomotorů. 
+ 
+\label{vnh2sp30} \subsubsection{VNH2SP30}
+ 
+ Driver {\bf vnh2sp30} \index{vnh2sp30} umí řídit pomocí PWM motor až do napětí 16~V, trvalého proudu 14~A a špičkového proudu 30~A. Pro takto velké proudy potřebuje účinné chlazení, např. chladič s ventilátorem. Je ideální pro řízení pohonů robotů včetně motorů z akuvrtaček. 
+ 
+ Driver umí pomocí PWM jízdu vpřed, vzad, brždění (motory jsou ve zkratu, když je na ně přiváděna logická 1 z PWM) a signál stop. Příklad programu pro použití tohoto driveru je v kapitole \ref{prog:vnh2sp30}. 
+ 
 
 \subsection{Stabilizátor}
 

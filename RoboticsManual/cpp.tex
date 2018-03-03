@@ -432,10 +432,10 @@ Pokud někde v programu napíšu \verb@rozsvitLedku()@, tak se rozsvítí LEDka 
 
 tělo funkce main -- všechny příkazy, které jsou mezi složenými závorkami, se po zahajení programu postupně vykonají
 
-\subsection{Knihovny}
+\label{knihovna}\subsection{Knihovny}
 
-\subsubsection{Vlastní knihovny}
-Z funkcí a procedur se mohou vytvářet soubory pro usnadnění práce. těmto souborům se říká \B{knihovny} \index{knihovna}. 
+\subsubsection{Vlastní knihovny} prog:knihovna
+Z funkcí a procedur se mohou vytvářet soubory pro usnadnění práce. Těmto souborům se říká \B{knihovny} \index{knihovna}. 
   Soubory mají koncovku \textit{.h}
 Příklad: \verb@avr/io.h@
 \verb@moje_knihovna.h@
@@ -446,14 +446,17 @@ Příklad:
 #include "moje_knihovna.h"
 \end{verbatim} 
 
+Příklad takové knihovny je v kapitole \ref{prog:knihovna} na straně \pageref{prog:knihovna}.
+
 \subsubsection{Použité knihovny}  
 
-Pro práci s mikrokontroléry budeme potřebovat některé už vytvořené knihovny
+Pro práci s mikrokontroléry budeme potřebovat některé už vytvořené knihovny.
 Příklad: 
 %\verb@avr/io.h@  -- pro základní vstup a výstup
 %\verb@avr/interrupt.h@ -- pro práci s přerušením
-\verb@Arduino.h@ -- zavádí příkazy pro práci s čipy ATMega a ESP32
-\verb@Learningkit.h@  -- pro pohodlnou práci s deskou ALKS
+Knihovna \verb@Arduino.h@ zavádí příkazy pro práci s čipy ATMega~a ESP32.
+Knihovna \verb@Learningkit.h@  rozšiřuje možnosti předchozí knihovny~o pohodlnou práci s deskou ALKS.
+
 
 %\verb@stdint.h@  -- zde jsou definovány datové typy (viz \ref{data1}) 
  
