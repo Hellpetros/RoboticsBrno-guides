@@ -7,6 +7,11 @@ Text předpokládá, že nad příklady budete samostatně přemýšlet a~učit 
 Doporučuji projít soubory {\it LearningKit.h}
 a~{\it LearningKit.cpp} (viz v~\hyperlink{explorer}{Exploreru}
 adresář {\it .piolibdeps/ArduinoLearningKitStarter\_ID1745/src} ), protože jsou v~nich zkratky typu {\tt L\_R} a~jejich přiřazení pinům čipu.
+
+Zdrojové soubory všech příkladů z této kapitoly jsou umístěny
+\href{https://github.com/RoboticsBrno/RoboticsBrno-guides/tree/RoboticsManual/RoboticsManual/priklady_c}{zde}.
+
+
 Další příklady jsou na \url{http://wall.robotikabrno.cz} a~\url{https://www.arduino.cc/reference/en/}.  
 
 \label{cpppr1} \subsection{Blikání LED} 
@@ -43,3 +48,14 @@ Funguje stejně, ale místo příkazu {\tt ledcWrite()} je použit {\tt analogWr
 Použijeme součástku \hyperref[qrd1114]{QRD1114}, kolektor (C) je připojený na A0. Zdrojový kód je pro Arduino Uno. 
 
 \lstinputlisting{priklady_c/qrd1114.cpp}
+
+\subsection{Posílání dat pro Lorris po sériové lince} \label{prog:lorris}
+
+Příklad ukazuje posílání dat do Analyzéru pro \hyperref[lorris]{Lorris}.
+ Posílá simulovaný barevný senzor, potenciometr, tlačítka binárně a tlačítka po bytech. 
+
+Zdrojový kód je tentokrát pro Arduino nano umístěné na desce ALKS a používá knihovny
+{\tt LearningKit.h}  a  {\tt LearningKit\_nano.h}. 
+
+\lstinputlisting{priklady_c/lorris_data.cpp}
+
