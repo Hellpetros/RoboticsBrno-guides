@@ -48,7 +48,7 @@ Jestliže budeme potřebovat jiný úhel natočení, nastavíme logickou jednič
 
 \label{esp32} \subsection{ESP 32}
 
-Deska\index{ESP~32!deska}\index{deska!ESP~32} ESP~32 je vývojová deska osazená čipem {\tt ESP-WROOM-32}, který má řadu výborných vlastností.\footnote{url{http://navody.arduino-shop.cz/navody-k-produktum/vyvojova-deska-esp32.html} }
+Deska\index{ESP~32!deska}\index{deska!ESP~32} {\bf ESP~32}  je vývojová deska osazená čipem {\tt ESP-WROOM-32}, který má řadu výborných vlastností.\footnote{\url{http://navody.arduino-shop.cz/navody-k-produktum/vyvojova-deska-esp32.html} }
 
 Deska se napájí z~\index{USB} USB (5~V) a~je na ní napěťový převodník
 %todo\rfc{? napěťový převodník} 
@@ -66,13 +66,15 @@ Na ALKS se dají nasadit desky ESP~32, Arduino uno  a~Arduino nano, které jí t
 
 \subsubsection*{ALKS a ESP~32}
 
-Pro nasazení desky ESP~32 na ALKS byla \index{LearningKit} napsaná knihovna {\it LearningKit}. 
+Pro nasazení desky   \hyperref[esp32]{ESP~32}
+ na ALKS byla \index{LearningKit} napsaná knihovna {\it LearningKit}. 
 Aby fungovala, musí být do souboru {\it platformio.ini} dopsán řádek 
 {\tt lib\_deps = 1745} (bez mezery na začátku řádku) a~do záhlaví souboru {\it main.cpp} doplňte 
 \verb| include "LearningKit.h"|.
 % {\tt include "LearningKit.h\"}.  
 % je nahrazeno \verb| include "LearningKit.h"| , protože \tt tady nějak nefunguje 
  -- viz obrázek \ref{fig:vsc_rozlozeni} vpravo.
+%todo zjistit, if lze LearningKit přidat přímo jako LearningKit_nano
 
 \label{alks:nano} \subsubsection*{ALKS a Arduino nano}
 
@@ -85,16 +87,14 @@ knihovnu {\tt LearningKit.h}, musí být také do souboru {\it platformio.ini} d
 
 
 
-
-
-
 \subsubsection*{Dokumentace k ALKS}
 
-Stránky  věnované desce ALKS jsou zde: \newline \url{https://github.com/RoboticsBrno/ArduinoLearningKitStarter}  
+Stránky  věnované desce ALKS jsou
+ \href{https://github.com/RoboticsBrno/ArduinoLearningKitStarter}{zde}.
 
-Zapojení \emergencystretch=2cm desky ALKS je zde: \url{https://github.com/RoboticsBrno/ArduinoLearningKitStarter/blob/master/docs/ArduinoLearningKitStarter.pdf}
+Zapojení desky ALKS je \href{https://github.com/RoboticsBrno/ArduinoLearningKitStarter/blob/master/docs/ArduinoLearningKitStarter.pdf}{zde}.
 
-Zapojení pinů desky ALKS zde: \url{https://github.com/RoboticsBrno/ArduinoLearningKitStarter/blob/master/docs/pinout.pdf}
+Zapojení pinů desky ALKS \href{https://github.com/RoboticsBrno/ArduinoLearningKitStarter/blob/master/docs/pinout.pdf}{zde}. 
 
 
 
