@@ -45,12 +45,12 @@ script:
 - ls -la output
 - ls -la output/_pdf
 - ls -la output/_html
-- sudo mv output/_pdf/dokumentace.pdf output/_pdf/RoboticsManual_$(date +'%Y-%m-%d_%H-%M-%S').pdf
+- sudo mv output/_pdf/dokumentace.pdf output/_pdf/RoboticsManual_$(date +'%Y-%m-%d_%H-%M').pdf
 
 before_deploy:
   - git config --local user.name "RoboticsBrno"
   - git config --local user.email "info@robotikabrno.cz"
-  - git tag "RoboticsManual_$(date +'%Y-%m-%d_%H-%M-%S')_$(git log --format=%h -1)"
+  - git tag "RoboticsManual_$(date +'%Y-%m-%d_%H-%M')"
 
 deploy:
   - provider: pages
