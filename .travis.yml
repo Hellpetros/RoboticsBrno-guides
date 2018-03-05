@@ -45,7 +45,7 @@ script:
 - ls -la output
 - ls -la output/_pdf
 - ls -la output/_html
-- mv output/_pdf/dokumentace.pdf output/_pdf/RoboticsManual_$(date +'%Y-%m-%d_%H-%M-%S').pdf
+- sudo mv output/_pdf/dokumentace.pdf output/_pdf/RoboticsManual_$(date +'%Y-%m-%d_%H-%M-%S').pdf
 
 before_deploy:
   - git config --local user.name "RoboticsBrno"
