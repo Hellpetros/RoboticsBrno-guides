@@ -50,7 +50,7 @@ script:
 before_deploy:
   - git config --local user.name "RoboticsBrno"
   - git config --local user.email "info@robotikabrno.cz"
-  - git tag "RoboticsManual_$(date +'%Y-%m-%d_%H-%M')"
+  - git tag "RoboticsManual_$(date +'%Y-%m-%d_%H-%M-%S')"
 
 deploy:
   - provider: pages
